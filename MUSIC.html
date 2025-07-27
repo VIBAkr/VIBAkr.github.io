@@ -1,0 +1,181 @@
+<html>
+<head>
+    <title>VIBAkr</title>
+    <style>
+       body {
+            font-family: 'Arial ', sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            transition: color 0.2s ease;
+        }
+        .nav a:hover {
+            color: #ccc;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .music-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .music-item {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<center>
+    <div class="header">
+     
+   <h1>MUSIC</h1>
+
+  </div>
+   <div class="music-container">
+        <div class="music-item">
+            <p>Multo - Cup of Joe</p>
+            <audio controls>
+                <source src="M1.mp4" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Saksi ang Langit - December Avenue</p>
+            <audio controls>
+                <source src="M2.mp4" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Naiilang - Le John</p>
+            <audio controls>
+                <source src="M3.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Golden - HuntR</p>
+            <audio controls>
+                <source src="M4.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Aura - lV of Spades</p>
+            <audio controls>
+                <source src="M5.mp4" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>You'll be in my Heart - Niki</p>
+            <audio controls>
+                <source src="M6.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Your Universe - Rico Blanco</p>
+            <audio controls>
+                <source src="M7.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Tingin - Cup of Joe</p>
+            <audio controls>
+                <source src="M8.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Tibik - Earl Agustin</p>
+            <audio controls>
+                <source src="M9.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Isa Lang - Arthur Nery</p>
+            <audio controls>
+                <source src="M10.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Sino - Unique Salonga</p>
+            <audio controls>
+                <source src="M11.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Tensionado - Soapdish</p>
+            <audio controls>
+                <source src="M12.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Bulong - December Avenue</p>
+            <audio controls>
+                <source src="M13.m4a" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="music-item">
+            <p>Misteryoso - Cup of Joe</p>
+            <audio controls>
+                <source src="M14.m4a" type="audio/mp3">
+            </audio>
+	</div>
+
+        <div class="music-item">
+            <p>Marilag - Dionela</p>
+            <audio controls>
+                <source src="M15.mp3" type="audio/mp3">
+            </audio>
+</div>
+</center>
+
+<body>
+<center>
+	<p><a href="../VIBAkr.html">Back to Home</a></p>
+</center>
+</body>
+
+ <script>
+    const audios = document.querySelectorAll('audio');
+    audios.forEach((audio, i) => audio.addEventListener('ended', () => audios[i + 1]?.play()));
+    audios[0].play();
+</script>
+
+</body>
+</html>
