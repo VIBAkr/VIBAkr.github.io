@@ -1,0 +1,762 @@
+:root {
+  --primary: #1d4ed8; /* Air Force Blue */
+  --background: #f8fafc;
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --card-bg: #ffffff;
+  --footer-bg: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header.wide {
+  max-width: none;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* Hero */
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* full screen */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff; /* bright white for contrast */
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #e0f2ff; /* soft sky-blue tone */
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 32, 80, 0.5); /* dark air-force blue tint */
+  z-index: 1;
+}
+
+/* Walkthrough Section */
+
+.walkthrough {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--background);
+}
+
+.walkthrough h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Footer */
+
+.footer {
+  padding: 2rem;
+  background-color: var(--footer-bg);
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+.content {
+  padding: 4rem 3vw;
+  max-width: 100%;
+  margin: auto;
+}
+
+.section {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  border-left: 5px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.section p,
+.section li {
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.section ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #f1f5f9;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+.mission h2 {
+  font-size: 1.5rem;
+  border-left: 5px solid var(--accent);
+  padding-left: 0.75rem;
+  color: var(--primary);
+}
+
+.mission p {
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .mission {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mission div {
+    width: 48%;
+  }
+}
+
+body {
+  background: #f8fafc; /* softer gray-blue Air Force tone */
+}
+
+/* Scroll animation */
+.section,
+.mission div {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.section.show,
+.mission div.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Back to top button */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop:hover {
+  background: var(--primary);
+}
+
+.photo-gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.photo-gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.photo-gallery img:hover {
+  transform: scale(1.03);
+}
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cta {
+  background: #e0edff; /* Softer Air Force blue */
+  color: #1e293b; /* Dark text */
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text);
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #1e3a8a;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.highlight-fb {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.accordion-item.special {
+  border: 2px solid var(--primary);
+  background-color: #f0f6ff;
+}
+
+.accordion-item.special .accordion-header {
+  background-color: #2563eb;
+}
+
+.accordion-item.special .accordion-header:hover {
+  background-color: #1d4ed8;
+}
+.accordion-group {
+  background-color: #f8faff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.accordion-item.special {
+  border: 2px solid var(--primary);
+  background-color: #f0f6ff;
+  margin-bottom: 1rem;
+}
+
+.accordion-item.special .accordion-header {
+  background-color: #2563eb;
+  color: white;
+}
+
+.accordion-item.special .accordion-header:hover {
+  background-color: #1d4ed8;
+}
+.photo-gallery img {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.photo-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.9); /* dark navy tone */
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-section {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 2rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.15rem;
+  top: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--primary);
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.timeline-content p {
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+.courses-intro {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.course-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.course-card {
+  display: flex;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.course-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-stripe {
+  width: 10px;
+}
+
+/* Modern Air Force theme stripe colors */
+.stripe-blue {
+  background-color: #2563eb;
+}
+
+.stripe-steel {
+  background-color: #64748b;
+}
+
+.stripe-sky {
+  background-color: #38bdf8;
+}
+
+.stripe-navy {
+  background-color: #1e3a8a;
+}
+
+.stripe-slate {
+  background-color: #475569;
+}
+
+.stripe-sand {
+  background-color: #facc15;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.card-body p {
+  font-size: 1.05rem;
+  text-align: justify;
+  line-height: 1.6;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 2rem 0 1rem;
+  color: var(--primary);
+  text-align: center;
+}
+.incentive-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .incentive-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .incentive-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+}
+.card-stripe {
+  width: 10px;
+  background-color: #2563eb; /* Force Air Force Blue */
+}
+.tooltip {
+  position: relative;
+}
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%; /* above element */
+  background: #1e293b;
+  color: #fff;
+  padding: 0.4rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.tooltip:hover::after {
+  opacity: 1;
+}
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel-section {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  max-height: 450px;
+  border-radius: 10px;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: var(--accent);
+}
+.quiz-section {
+  background-color: #f1f5f9;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.quiz-section p {
+  font-weight: bold;
+}
+
+.quiz-section label {
+  display: block;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.scrollspy-nav a.active {
+  color: var(--primary);
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary);
+}
