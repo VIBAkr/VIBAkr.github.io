@@ -778,28 +778,9 @@ body {
 }
 .fb-video-container {
   max-width: 800px;
-  margin: 2rem auto;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-.fb-video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-.fb-video-container {
-  max-width: 800px;
   margin: 3rem auto;
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 50%; /* was 56.25%, now shorter for better height */
   height: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -814,4 +795,5 @@ body {
   height: 100%;
   border: none;
 }
+
 
