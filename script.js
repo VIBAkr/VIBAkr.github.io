@@ -1,3 +1,4 @@
+
 function revealOnScroll() {
   const revealElements = document.querySelectorAll(".section, .mission div, .timeline-item, .reveal");
   const triggerBottom = window.innerHeight * 0.9;
@@ -56,3 +57,6 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+function toggleMenu() {
+  document.querySelector('.nav').classList.toggle('show');
+}
