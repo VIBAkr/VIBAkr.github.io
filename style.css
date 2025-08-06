@@ -395,6 +395,42 @@ body {
     padding: 1rem;
   }
 
+@media (max-width: 1024px) {
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+  .mobile-title {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 1.25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary);
+    cursor: pointer;
+  }
+}
+
   .nav {
     display: none;
     flex-direction: column;
@@ -500,5 +536,58 @@ body {
   .carousel-btn {
     font-size: 1.5rem;
     padding: 0.3rem 0.7rem;
+  }
+}
+
+/* Mobile Header Layout */
+@media (max-width: 1024px) {
+  .header {
+    position: relative;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .logo span {
+    display: none; /* Hide on small screens, text is centered separately */
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary);
+    cursor: pointer;
+  }
+
+  /* Center PAF ROTC Text on Mobile */
+  .mobile-center-title {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--primary);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none !important;
   }
 }
