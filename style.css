@@ -31,6 +31,27 @@ body {
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
+  top: 60px
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed; /* Fix nav position */
+    top: 60px; /* Height of header; adjust if needed */
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 60px); /* Prevent overflow */
+    overflow-y: auto;
+    background: white;
+    z-index: 1100;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav.show {
+    display: flex;
+  }
 }
 
 .logo {
@@ -205,28 +226,34 @@ body {
 
 /* Mission */
 .mission {
-  background-color: #f1f5f9;
-  padding: 2.5rem 1.5rem; /* horizontal padding same as other containers */
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
   max-width: 1000px;
-  margin: 2rem auto 3rem auto; /* centered with spacing */
+  margin-left: auto;
+  margin-right: auto;
   box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+.mission > div {
+  flex: 1;
+}
+
+/* Make side-by-side on tablets and up */
 @media (min-width: 768px) {
   .mission {
     flex-direction: row;
-    justify-content: space-between;
   }
   .mission > div {
     width: 48%;
   }
 }
-
 
 /* Timeline Section (History Page) */
 .timeline-section {
@@ -906,7 +933,9 @@ body {
 
 @media (max-width: 768px) {
   .header.nav-open .logo {
-    display: none;
+    display: none !important; /* force hide logo */
   }
 }
+
+
 
