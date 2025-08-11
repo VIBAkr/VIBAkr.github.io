@@ -205,38 +205,16 @@ body {
 
 /* Mission */
 .mission {
+  background-color: #f1f5f9;
+  padding: 2.5rem 1.5rem; /* horizontal padding same as other containers */
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 2rem auto 3rem auto; /* centered with spacing */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #f1f5f9;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-}
-
-.mission div {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.mission div.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.mission h2 {
-  font-size: 1.5rem;
-  border-left: 5px solid var(--accent);
-  padding-left: 0.75rem;
-  color: var(--primary);
-}
-
-.mission p {
-  text-align: justify;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--text);
 }
 
 @media (min-width: 768px) {
@@ -244,10 +222,11 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-  .mission div {
+  .mission > div {
     width: 48%;
   }
 }
+
 
 /* Timeline Section (History Page) */
 .timeline-section {
@@ -924,3 +903,10 @@ body {
   margin: 0 auto 3rem auto;
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .header.nav-open .logo {
+    display: none;
+  }
+}
+
