@@ -238,11 +238,27 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  /* Center horizontally on small screens */
+  align-items: center;
+  text-align: center;
 }
 
 .mission > div {
-  flex: 1;
+  width: 100%; /* full width on mobile */
 }
+
+@media (min-width: 768px) {
+  .mission {
+    flex-direction: row;
+    align-items: stretch; /* revert on desktop */
+    text-align: left;
+  }
+  .mission > div {
+    width: 48%;
+  }
+}
+
 
 /* Make side-by-side on tablets and up */
 @media (min-width: 768px) {
@@ -935,7 +951,6 @@ body {
     display: none !important; /* force hide logo */
   }
 }
-
 
 
 
