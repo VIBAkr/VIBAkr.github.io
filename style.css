@@ -591,3 +591,97 @@ body {
     display: none !important;
   }
 }
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section {
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.section p,
+.section ul {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+/* Mission/Vision layout restored */
+.mission {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.mission div {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+}
+
+/* Carousel section spacing */
+.carousel-section {
+  margin-top: 50px;
+  padding: 30px 0;
+}
+
+/* Footer alignment and padding */
+.footer {
+  padding: 40px 20px;
+}
+
+.footer-links {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.footer-links ul {
+  padding-left: 20px;
+}
+
+/* Adjust content spacing for tablets & phones */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 15px;
+  }
+  .section {
+    padding: 20px 15px;
+  }
+  .mission {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Header adjustments to keep logo-left, title-center, burger-right */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .logo {
+    flex: 0 0 auto;
+  }
+  .header span {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .hamburger {
+    flex: 0 0 auto;
+  }
+}
