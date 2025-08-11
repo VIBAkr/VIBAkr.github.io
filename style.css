@@ -23,42 +23,49 @@ body {
 
 /* Header */
 .header {
+  position: relative; /* So we can position nav relative to it */
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
   background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
+  z-index: 1100; /* Keep logo above nav, but we will separate */
+}
+
+.nav {
+  position: absolute; /* so it appears below header */
+  top: 100%; /* just below header */
+  left: 0;
+  width: 100%;
+  background: white;
+  flex-direction: column;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1050; /* below logo */
+}
+
+.nav.show {
   display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--primary);
 }
 
-.logo img {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  transition: color 0.2s ease;
+.hamburger {
+  z-index: 1200; /* keep hamburger above all */
 }
 
 .nav a:hover {
   color: var(--primary);
 }
+
+.nav a {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  display: block;
+}
+
 
 /* Hero */
 .hero {
@@ -115,11 +122,13 @@ body {
   margin-bottom: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   transform: translateY(30px);
 }
-
 .section.show {
   opacity: 1;
   transform: translateY(0);
@@ -191,6 +200,59 @@ body {
   .mission div {
     width: 48%;
   }
+}
+
+/* Timeline Section (History Page) */
+.timeline-section {
+  background-color: #e6f0ff; /* Light Air Force blue tint */
+  padding: 2rem 3rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.15); /* Soft blue shadow */
+  max-width: 900px;
+  margin: 3rem auto; /* Center and add vertical spacing */
+}
+
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  background: white;
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.1);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.timeline-item:hover {
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.25);
+}
+
+.timeline-dot {
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: -10px;
+  top: 1.6rem;
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.timeline-content h3 {
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Carousel */
@@ -395,7 +457,6 @@ body {
     padding: 1rem;
   }
 
-@media (max-width: 1024px) {
   .mobile-header {
     display: flex;
     align-items: center;
@@ -403,11 +464,9 @@ body {
     width: 100%;
   }
 
-@media (max-width: 1024px) {
   .hamburger {
     display: block;
   }
-}
 
   .mobile-title {
     font-weight: 800;
@@ -429,7 +488,6 @@ body {
     color: var(--primary);
     cursor: pointer;
   }
-}
 
   .nav {
     display: none;
@@ -590,4 +648,232 @@ body {
   .hamburger {
     display: none !important;
   }
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-auto-rows: auto;                  /* auto height per row */
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.course-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(29, 78, 216, 0.3);
+}
+
+.card-stripe {
+  height: 6px;
+  width: 100%;
+}
+
+.stripe-blue {
+  background-color: var(--primary);
+}
+
+.stripe-steel {
+  background-color: #4a6572; /* steel blue shade */
+}
+
+.stripe-sky {
+  background-color: #38bdf8; /* sky blue */
+}
+
+.stripe-navy {
+  background-color: #1e40af; /* navy blue */
+}
+
+.card-body {
+  padding: 1.5rem 2rem 2rem;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-body ul {
+  list-style: disc inside;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.card-body ul li {
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 480px) {
+  .card-body h3 {
+    font-size: 1.25rem;
+  }
+  
+  .card-body ul {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr; /* single column on small screens */
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  border-left: 6px solid var(--accent);
+  padding-left: 0.8rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* centered section titles */
+}
+
+/* Responsive Course Grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+/* Course Cards */
+.course-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+}
+
+.card-stripe {
+  height: 6px;
+  width: 100%;
+}
+
+.stripe-blue {
+  background-color: #1d4ed8;
+}
+
+.stripe-steel {
+  background-color: #64748b;
+}
+
+.stripe-sky {
+  background-color: #38bdf8;
+}
+
+.stripe-navy {
+  background-color: #1e40af;
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.card-body ul {
+  list-style: inside disc;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .card-body h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-body ul {
+    font-size: 0.95rem;
+  }
+}
+
+/* Subjects grid responsive tweaks */
+@media (max-width: 768px) {
+  .subjects-grid {
+    grid-template-columns: 1fr; /* single column on small screens */
+  }
+}
+
+.incentive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1rem;
+}
+
+.stripe-slate {
+  background-color: #708090;
+}
+
+@media (max-width: 768px) {
+  .incentive-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Container for consistency */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Or if no container wrapper, just pad mission directly */
+.mission {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+  box-sizing: border-box;
 }
