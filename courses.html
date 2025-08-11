@@ -8,21 +8,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header wide">
-  <div class="logo">
-  <img src="paf-logo.jpg" alt="PAF Logo">
-  <span>PAF ROTC</span>
-</div>
-<button class="hamburger" onclick="toggleMenu()">☰</button>
-
-  <nav class="nav scrollspy-nav">
-    <a href="index.html">Home</a>
-    <a href="history.html">History</a>
-    <a href="courses.html">Courses</a>
-    <a href="subjects.html">Subjects</a>
-    <a href="incentives.html">Incentives</a>
-  </nav>
-</header>
+  <header class="header wide">
+    <div class="logo">
+      <img src="paf-logo.jpg" alt="PAF Logo">
+      <span>PAF ROTC</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="courses.html">Courses</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="incentives.html">Incentives</a>
+    </nav>
+  </header>
 
   <section class="hero" style="background-image: url('hero-bg.jpg');">
     <div class="hero-content">
@@ -32,69 +30,67 @@
   </section>
 
 <main class="content">
-  <div class="course-grid">
+  <section class="course-grid">
 
-<!-- Basic ROTC -->
-<div class="course-card reveal">
-  <div class="card-stripe stripe-blue"></div>
-  <div class="card-body">
-    <h3>Basic ROTC</h3>
-    <ul>
-      <li><strong>Introductory phase of ROTC training</strong> – Designed for first-year cadets to build a strong foundation in military discipline.</li>
-      <li><strong>Military customs and courtesies</strong> – Learn proper saluting, ranks, discipline, and respect for the chain of command.</li>
-      <li><strong>Basic drills and formations</strong> – Focus on marching, facing movements, and coordinated platoon-level movements.</li>
-      <li><strong>Civic awareness and discipline</strong> – Includes nation-building, law-abiding citizenship, and public service values.</li>
-      <li><strong>1-year duration</strong> – Two semesters (3 units per sem) of mandatory instruction and field participation.</li>
-    </ul>
-  </div>
-</div>
+    <!-- Basic ROTC -->
+    <article class="course-card reveal">
+      <div class="card-stripe stripe-blue"></div>
+      <div class="card-body">
+        <h3>Basic ROTC</h3>
+        <ul>
+          <li><strong>Introductory phase of ROTC training</strong> – Designed for first-year cadets to build a strong foundation in military discipline.</li>
+          <li><strong>Military customs and courtesies</strong> – Learn proper saluting, ranks, discipline, and respect for the chain of command.</li>
+          <li><strong>Basic drills and formations</strong> – Focus on marching, facing movements, and coordinated platoon-level movements.</li>
+          <li><strong>Civic awareness and discipline</strong> – Includes nation-building, law-abiding citizenship, and public service values.</li>
+          <li><strong>1-year duration</strong> – Two semesters (3 units per sem) of mandatory instruction and field participation.</li>
+        </ul>
+      </div>
+    </article>
 
-<!-- Advanced ROTC -->
-<div class="course-card reveal">
-  <div class="card-stripe stripe-steel"></div>
-  <div class="card-body">
-    <h3>Advanced ROTC</h3>
-    <ul>
-      <li><strong>Leadership and management training</strong> – Cadets are trained to lead, supervise squads, and make sound tactical decisions.</li>
-      <li><strong>Staff duties and tactical operations</strong> – Learn how to operate as a Corps Commander – Flight Leader in simulated military operations and missions.</li>
-      <li><strong>Command or admin roles</strong> – Cadets may act as unit commanders, logistics officers, or drill masters during field exercises.</li>
-      <li><strong>Reservist commissioning eligibility</strong> – Graduates may qualify to join the reserve force of the Armed Forces of the Philippines.</li>
-    </ul>
-  </div>
-</div>
+    <!-- Advanced ROTC -->
+    <article class="course-card reveal">
+      <div class="card-stripe stripe-steel"></div>
+      <div class="card-body">
+        <h3>Advanced ROTC</h3>
+        <ul>
+          <li><strong>Leadership and management training</strong> – Cadets are trained to lead, supervise squads, and make sound tactical decisions.</li>
+          <li><strong>Staff duties and tactical operations</strong> – Learn how to operate as a Corps Commander – Flight Leader in simulated military operations and missions.</li>
+          <li><strong>Command or admin roles</strong> – Cadets may act as unit commanders, logistics officers, or drill masters during field exercises.</li>
+          <li><strong>Reservist commissioning eligibility</strong> – Graduates may qualify to join the reserve force of the Armed Forces of the Philippines.</li>
+        </ul>
+      </div>
+    </article>
 
-<!-- Summer Cadre Training -->
-<div class="course-card reveal">
-  <div class="card-stripe stripe-sky"></div>
-  <div class="card-body">
-    <h3>Summer Cadre Training</h3>
-    <ul>
-      <li><strong>Special summer training module</strong> – Optional but highly recommended for selected cadets who excel during the school year.</li>
-      <li><strong>Field survival and combat readiness</strong> – Includes jungle survival, navigation, map reading, and simulated ambush drills.</li>
-      <li><strong>Marksmanship and first aid</strong> – Hands-on firearms training, first responder techniques, and basic life support (BLS).</li>
-      <li><strong>Competitions and simulation drills</strong> – Inter-unit challenges including fire-fighting, rescue drills, and obstacle courses.</li>
-    </ul>
-  </div>
-</div>
+    <!-- Summer Cadre Training -->
+    <article class="course-card reveal">
+      <div class="card-stripe stripe-sky"></div>
+      <div class="card-body">
+        <h3>Summer Cadre Training</h3>
+        <ul>
+          <li><strong>Special summer training module</strong> – Optional but highly recommended for selected cadets who excel during the school year.</li>
+          <li><strong>Field survival and combat readiness</strong> – Includes jungle survival, navigation, map reading, and simulated ambush drills.</li>
+          <li><strong>Marksmanship and first aid</strong> – Hands-on firearms training, first responder techniques, and basic life support (BLS).</li>
+          <li><strong>Competitions and simulation drills</strong> – Inter-unit challenges including fire-fighting, rescue drills, and obstacle courses.</li>
+        </ul>
+      </div>
+    </article>
 
-<!-- Unit Training Events -->
-<div class="course-card reveal">
-  <div class="card-stripe stripe-navy"></div>
-  <div class="card-body">
-    <h3>Unit Training Events</h3>
-    <ul>
-      <li><strong>Ceremonial and unit activities</strong> – Includes weekly flag ceremonies, silent drills, and unit inspections.</li>
-      <li><strong>Parades and reviews</strong> – Cadets participate in citywide, schoolwide, or national-level ROTC parades and anniversaries.</li>
-      <li><strong>Fun runs and disaster drills</strong> – Promotes physical fitness, teamwork, and response to calamity scenarios like earthquakes or fire.</li>
-      <li><strong>Joint training and inter-unit tasks</strong> – Work alongside Army and Navy ROTC units in cooperative training events or boot camps.</li>
-    </ul>
-  </div>
-</div>
+    <!-- Unit Training Events -->
+    <article class="course-card reveal">
+      <div class="card-stripe stripe-navy"></div>
+      <div class="card-body">
+        <h3>Unit Training Events</h3>
+        <ul>
+          <li><strong>Ceremonial and unit activities</strong> – Includes weekly flag ceremonies, silent drills, and unit inspections.</li>
+          <li><strong>Parades and reviews</strong> – Cadets participate in citywide, schoolwide, or national-level ROTC parades and anniversaries.</li>
+          <li><strong>Fun runs and disaster drills</strong> – Promotes physical fitness, teamwork, and response to calamity scenarios like earthquakes or fire.</li>
+          <li><strong>Joint training and inter-unit tasks</strong> – Work alongside Army and Navy ROTC units in cooperative training events or boot camps.</li>
+        </ul>
+      </div>
+    </article>
 
-
-  </div>
+  </section>
 </main>
-
 
   <footer class="footer">
     <div class="footer-links">
@@ -121,5 +117,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
