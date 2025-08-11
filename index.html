@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- Header -->
 <header class="header wide">
   <div class="logo">
-  <img src="paf-logo.jpg" alt="PAF Logo">
-  <span>PAF ROTC</span>
-</div>
-<button class="hamburger" onclick="toggleMenu()">☰</button>
+    <img src="paf-logo.jpg" alt="Philippine Air Force Logo">
+    <span>PAF ROTC</span>
+  </div>
+  <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
 
-  <nav class="nav scrollspy-nav">
-    <a href="index.html">Home</a>
+  <nav class="nav scrollspy-nav" aria-label="Main navigation">
+    <a href="index.html" class="active">Home</a>
     <a href="history.html">History</a>
     <a href="courses.html">Courses</a>
     <a href="subjects.html">Subjects</a>
@@ -25,6 +26,7 @@
   </nav>
 </header>
 
+<!-- Hero -->
 <section class="hero" style="background-image: url('hero-bg.jpg');">
   <div class="hero-content">
     <h1>UC - PAF ROTC Unit</h1>
@@ -34,7 +36,9 @@
 
 <main class="content">
 
-  <section class="mission">
+  <!-- Mission & Vision -->
+<div class="container">
+<section class="section mission">
     <div>
       <h2>Mission</h2>
       <p>To develop capable, disciplined, and service-oriented cadets who are prepared to support the Armed Forces of the Philippines and contribute to national development.</p>
@@ -44,12 +48,15 @@
       <p>To be a premier ROTC unit that molds future leaders grounded in patriotism, integrity, and excellence.</p>
     </div>
   </section>
+</div>
 
+  <!-- What is ROTC -->
   <section class="section">
     <h2>What is ROTC?</h2>
     <p>The Reserve Officer Training Corps (ROTC) is a program designed to provide military training to tertiary level students in order to motivate, train, organize, and mobilize them for national defense preparedness. It is one of the three components of the National Service Training Program (NSTP), authorized under Republic Act No. 9163.</p>
   </section>
 
+  <!-- Legal Basis -->
   <section class="section">
     <h2>Legal Basis</h2>
     <ul>
@@ -59,14 +66,16 @@
     </ul>
   </section>
 
+  <!-- Exemptions -->
   <section class="section">
-    <h2>Exempted in Taking ROTC</h2>
+    <h2>Exemptions from ROTC</h2>
     <ul>
       <li>Non-Filipino citizens or nationals</li>
       <li>Barangay / Sangguniang Kabataan officials (with required documentation)</li>
     </ul>
   </section>
 
+  <!-- AFP Organization -->
   <section class="section">
     <h2>AFP Organization</h2>
     <p>The Armed Forces of the Philippines (AFP) is composed of four major branches working together to ensure the country’s defense and security:</p>
@@ -80,63 +89,66 @@
 
 </main>
 
+<!-- Carousel -->
 <section class="section carousel-section">
   <h2>Cadet Life & Highlights</h2>
-  
   <div class="carousel-container">
-    <button class="carousel-btn prev">‹</button>
-
+    <button class="carousel-btn prev" aria-label="Previous image">‹</button>
     <div class="carousel-track">
-      <img src="cadet1.jpg">
-    <img src="cadet2.jpg">
-    <img src="cadet3.jpg">
-    <img src="cadet4.jpg">
-    <img src="cadet5.jpg">
-    <img src="cadet6.jpg">
-    <img src="cadet7.jpg">
-    <img src="cadet8.jpg">
-    <img src="cadet9.jpg">
-    <img src="cadet10.jpg">
-    <img src="cadet11.jpg">
-    <img src="cadet12.jpg">
-    <img src="cadet13.jpg">
-    <img src="cadet14.jpg">
-    <img src="cadet15.jpg">
-    <img src="cadet16.jpg">
-    <img src="cadet17.jpg">
-    <img src="cadet19.jpg">
-    <img src="cadet20.jpg">
-    <img src="cadet21.jpg">
-    <img src="cadet22.jpg">
-    <img src="cadet24.jpg">
-    <img src="cadet25.jpg">
-    <img src="cadet26.jpg">
+      <img src="cadet1.jpg" alt="Cadet training 1">
+      <img src="cadet2.jpg" alt="Cadet training 2">
+      <img src="cadet3.jpg" alt="Cadet training 3">
+      <img src="cadet4.jpg" alt="Cadet training 4">
+      <img src="cadet5.jpg" alt="Cadet training 5">
+      <img src="cadet6.jpg" alt="Cadet training 6">
+      <img src="cadet7.jpg" alt="Cadet training 7">
+      <img src="cadet8.jpg" alt="Cadet training 8">
+      <img src="cadet9.jpg" alt="Cadet training 9">
+      <img src="cadet10.jpg" alt="Cadet training 10">
+      <img src="cadet11.jpg" alt="Cadet training 11">
+      <img src="cadet12.jpg" alt="Cadet training 12">
+      <img src="cadet13.jpg" alt="Cadet training 13">
+      <img src="cadet14.jpg" alt="Cadet training 14">
+      <img src="cadet15.jpg" alt="Cadet training 15">
+      <img src="cadet16.jpg" alt="Cadet training 16">
+      <img src="cadet17.jpg" alt="Cadet training 17">
+      <img src="cadet19.jpg" alt="Cadet training 19">
+      <img src="cadet20.jpg" alt="Cadet training 20">
+      <img src="cadet21.jpg" alt="Cadet training 21">
+      <img src="cadet22.jpg" alt="Cadet training 22">
+      <img src="cadet24.jpg" alt="Cadet training 24">
+      <img src="cadet25.jpg" alt="Cadet training 25">
+      <img src="cadet26.jpg" alt="Cadet training 26">
+    </div>
+    <button class="carousel-btn next" aria-label="Next image">›</button>
   </div>
-<button class="carousel-btn next">›</button>
-</div>
 </section>
 
-<!-- Lightbox overlay -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()" role="dialog" aria-modal="true">
   <img id="lightbox-img" src="" alt="Cadet Highlight">
 </div>
 
+<!-- Facebook Video -->
 <section class="fb-video-container">
   <iframe 
     src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61559774457680%2Fvideos%2F1206710343692602%2F&show_text=false&width=800"
     width="800"
     height="450"
+    title="UC - PAF ROTC Facebook Video"
     allowfullscreen
     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
   </iframe>
 </section>
 
+<!-- Call to Action -->
 <section class="section cta">
   <h2>Join the PAF ROTC Unit Today</h2>
   <p>Be part of a legacy. Serve with honor, discipline, and leadership. Whether you're looking to build skills, serve your nation, or be part of a proud cadet corps, your journey starts here.</p>
   <a href="https://www.facebook.com/profile.php?id=61559774457680" target="_blank" class="cta-button">Join Us on Facebook</a>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-links">
     <h4>Official Links</h4>
@@ -158,11 +170,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
-
-
-
-
-
