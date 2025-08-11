@@ -8,21 +8,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header wide">
-  <div class="logo">
-  <img src="paf-logo.jpg" alt="PAF Logo">
-  <span>PAF ROTC</span>
-</div>
-<button class="hamburger" onclick="toggleMenu()">☰</button>
-
-  <nav class="nav scrollspy-nav">
-    <a href="index.html">Home</a>
-    <a href="history.html">History</a>
-    <a href="courses.html">Courses</a>
-    <a href="subjects.html">Subjects</a>
-    <a href="incentives.html">Incentives</a>
-  </nav>
-</header>
+  <header class="header wide">
+    <div class="logo">
+      <img src="paf-logo.jpg" alt="PAF Logo">
+      <span>PAF ROTC</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="courses.html">Courses</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="incentives.html">Incentives</a>
+    </nav>
+  </header>
 
   <section class="hero" style="background-image: url('hero-bg.jpg');">
     <div class="hero-content">
@@ -34,9 +32,9 @@
 <main class="content">
 
 <!-- SECTION 1: Basic ROTC Subjects -->
-<center><h2 class="section-title">Basic ROTC Subjects</h2></center>
+<h2 class="section-title">Basic ROTC Subjects</h2></center>
 <br>
-<div class="course-grid">
+<div class="subjects-grid">
   <div class="course-card reveal">
     <div class="card-stripe stripe-blue"></div>
     <div class="card-body">
@@ -89,9 +87,9 @@
 <br><br>
 
 <!-- SECTION 2: Philippine Air Force Subjects -->
-<center><h2 class="section-title">Philippine Air Force Subjects</h2></center>
+<h2 class="section-title">Philippine Air Force Subjects</h2></center>
 <br>
-<div class="course-grid">
+<div class="subjects-grid">
   <div class="course-card reveal">
     <div class="card-stripe stripe-blue"></div>
     <div class="card-body">
@@ -132,9 +130,9 @@
 <br><br>
 
 <!-- SECTION 3: Search, Rescue & First Response -->
-<center><h2 class="section-title">Search, Rescue & First Response</h2></center>
+<h2 class="section-title">Search, Rescue & First Response</h2></center>
 <br>
-<div class="course-grid">
+<div class="subjects-grid">
   <div class="course-card reveal">
     <div class="card-stripe stripe-navy"></div>
     <div class="card-body">
@@ -175,9 +173,9 @@
 <br><br>
 
 <!-- SECTION 4: Drills, Ceremonies, and Events -->
-<center><h2 class="section-title">Drills, Ceremonies, and Events</h2></center>
+<h2 class="section-title">Drills, Ceremonies, and Events</h2></center>
 <br>
-<div class="course-grid">
+<div class="subjects-grid">
   <div class="course-card reveal">
     <div class="card-stripe stripe-sky"></div>
     <div class="card-body">
@@ -259,9 +257,7 @@
   </div>
 </div>
 
-
   </div>
-
 </main>
 
   <footer class="footer">
@@ -289,5 +285,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
