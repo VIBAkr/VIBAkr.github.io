@@ -31,13 +31,12 @@ body {
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
-  top: 60px
 }
 
 @media (max-width: 768px) {
   .nav {
     position: fixed; /* Fix nav position */
-    top: 60px; /* Height of header; adjust if needed */
+    top: 80px; /* Height of header; adjust if needed */
     left: 0;
     width: 100%;
     max-height: calc(100vh - 60px); /* Prevent overflow */
@@ -936,6 +935,7 @@ body {
     display: none !important; /* force hide logo */
   }
 }
+
 
 
 
