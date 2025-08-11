@@ -69,9 +69,10 @@ body {
 
 /* Hero */
 .hero {
-  background-size: cover;
-  background-position: center;
+  background-image: url('your-hero-bg.jpg'); /* add your image here */
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; /* prevent zoom/cropping, show full image */
   height: 100vh;
   position: relative;
   display: flex;
@@ -85,7 +86,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 32, 80, 0.5);
+  background: rgba(0, 32, 80, 0.5); /* Air Force blue tint */
   z-index: 1;
 }
 
@@ -94,7 +95,8 @@ body {
   z-index: 2;
   max-width: 800px;
   padding: 2rem;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  /* text shadow for extra contrast */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
@@ -877,3 +879,4 @@ body {
   margin: 0 auto 3rem auto;
   box-sizing: border-box;
 }
+
