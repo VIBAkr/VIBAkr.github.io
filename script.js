@@ -87,8 +87,13 @@ function toggleMenu() {
 
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
+const header = document.querySelector('.header');
 
 hamburger.addEventListener('click', () => {
   nav.classList.toggle('show');
+  header.classList.toggle('nav-open');
 });
+
+
+
 
