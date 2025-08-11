@@ -36,7 +36,7 @@ body {
 @media (max-width: 768px) {
   .nav {
     position: fixed; /* Fix nav position */
-    top: 80px; /* Height of header; adjust if needed */
+    top: 60px; /* Height of header; adjust if needed */
     left: 0;
     width: 100%;
     max-height: calc(100vh - 60px); /* Prevent overflow */
@@ -935,6 +935,7 @@ body {
     display: none !important; /* force hide logo */
   }
 }
+
 
 
 
